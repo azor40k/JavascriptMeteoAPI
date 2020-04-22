@@ -23,13 +23,11 @@ window.addEventListener('load', () => {
             long = position.coords.longitude
             lat = position.coords.latitude
 
-            // //Coordonées New York
-            // long = -74.0060152
-            // lat = 40.7127281
+            // //Coordonées 
+            // long = 
+            // lat = 
 
-            // //Coordonées Tokyo
-            // long = 139.7594549
-            // lat = 35.6828387
+            
             
             //ajout des variables latitude et longitude à lapi
             const api = `https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=${long}&lat=${lat}`
@@ -43,8 +41,7 @@ window.addEventListener('load', () => {
                     }
                 })
                 .then(response => {
-                    // console.log(response);
-
+                    console.log(response);
                     //renvoie des données recu en JSON
                     return response.json();
 
