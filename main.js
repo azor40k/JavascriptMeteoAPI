@@ -53,14 +53,16 @@ window.addEventListener('load', () => {
                     console.log(data);
 
                     //abréviation des variable récupéré de l'api 
-                    const { temp, timezone, ob_time } = data.data[0];
+                    const { temp, timezone, /*datetime*/ } = data.data[0];
                     const { description, icon } = data.data[0].weather;
 
                     //set des données recu de l'api
                     temperatureDegree.textContent = temp;
                     temperatureDescription.textContent = description;
                     locationTimeZone.textContent = timezone;
-                    // locationDate.textContent = ob_time;
+                    // locationDate.textContent = datetime;
+
+                    //changement de l'icon
                     Icons.src = `icons/${icon}.png`
 
                     //conversion de celsius en fahrenheit
